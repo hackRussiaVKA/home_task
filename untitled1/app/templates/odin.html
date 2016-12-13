@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Positive technologies task</title>
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/framework.css') }}">
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+		<div class="f-nav-bar">
+	<div class="f-nav-bar-body">
+		<div class="f-nav-bar-title">
+			<a href="#">65 kaf</a>
+		</div><!-- f-nav-bar-title -->
+		<ul class="f-nav">
+			<li><a href="index.html">Главная</a></li>
+			<li class="active"><a href="odin.html">Классификатор</a></li>
+			<li><a href="dva.html">...</a></li>
+			<li><a href="tri.html">Показать статистику</a></li>
+		</ul><!-- f-nav -->
+	</div><!-- f-nav-bar-body -->
+		</div><!-- f-nav-bar -->
+	<div class="g">
+		<div class="g-row">
+			<div class="g-12">&nbsp;</div>
+			<div class="g-12">
+				<form action='/odin_post' method="post" name="form">
+				<label>Введите токен: <input name="token" type="text" class="g-2"></label><button class="f-bu">Ok</button>
+				</form>
+			</div>
+		</div><!-- g-row -->
+		<div class="g-row">
+			<div class="f-message">
+	<span class="close"></span>
+	<h5>Вероятность легитимности трафика</h5>
+
+				<div class="f-message f-message-error">
+				<p>c</p>
+				</div><!--f-message -->
+
+				<div class="f-message f-message-success">
+				<p>c</p>
+				</div><!--f-message -->
+
+			</div><!--f-message -->
+		</div><!-- g-row -->
+		<div class="g-row">
+			<div class="g-2 f-gallery-item">
+			<a href="#"><img src={{"dsh.adres"}} width="370" height="208" alt="pic" />
+ 			<h4>Дашборд</h4></a>
+			</div><!-- f-gallery-item -->
+		</div><!-- g-row -->
+	</div><!-- g -->
+</body>
+</html>

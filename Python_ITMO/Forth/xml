@@ -1,0 +1,10 @@
+<people>
+    <man>
+        <name>Olga Sidorova</name>
+        <age>25</age>
+    </man>
+    <man>
+        <name>Ivan Sidorov</name>
+        <age>27</age>
+    </man>
+</people>

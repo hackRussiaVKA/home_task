@@ -1,0 +1,69 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Positive technologies task</title>
+
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/framework.css') }}">
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+		<div class="f-nav-bar">
+	<div class="f-nav-bar-body">
+		<div class="f-nav-bar-title">
+			<a href="#">65 kaf</a>
+		</div><!-- f-nav-bar-title -->
+		<ul class="f-nav">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="odin.html">Классификатор</a></li>
+			<li><a href="dva.html">...</a></li>
+			<li class="active"><a href="tri.html">Показать статистику</a></li>
+		</ul><!-- f-nav -->
+	</div><!-- f-nav-bar-body -->
+		</div><!-- f-nav-bar -->
+	<div class="g">
+		<div class="g-row">
+			&nbsp;
+		</div><!-- g-row -->
+		<div class="g-row">
+			<table class="f-table-zebra">
+				<caption>Статистика :</caption>
+						<tbody>
+						<tr>
+							<th width="350">Всего векторов:</th><td>{{stats_tv.total_vectors}}</td>
+						</tr>
+						<tr>
+							<th>Число попыток:</th><td>{{stats_at_numb.attempt_number}}</td>
+						</tr>
+						<tr>
+							<th>Процент обработанных данных:</th><td>{{stats_tr.total_results}}</td>
+						</tr>
+						<tr>
+							<th>Средняя точность:</th><td>{{stats_avgaccur.avg_accuracy}}</td>
+						</tr>
+						<tr>
+							<th>Процент ложноположительных результатов:</th><td>{{stats_avgfpr.avg_false_positive_ratio}}</td>
+						</tr>
+						<tr>
+							<th>Время обработки одного вектора:</th><td>{{stats_avgst.avg_spent_time}}</td>
+						</tr>
+						<tr>
+							<th>Средний уровень сложности:</th><td>{{stats_avgul.avg_user_level}}</td>
+						</tr>
+						<tr>
+							<th>Объем обработанных данных:</th><td>{{stats_cdr.classify_data_ratio}}</td>
+						</tr>
+						<tr>
+							<th>Процент ложноотрицательных результатов:</th><td>{{stats_avgfnr.avg_false_negative_ratio}}</td>
+						</tr>
+						</tbody>
+			</table>
+		</div><!-- g-row -->
+	</div><!-- g -->
+</body>
+</html>
