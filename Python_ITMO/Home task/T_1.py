@@ -25,57 +25,14 @@ Students = [
     ['Анастасия Турубанова', 24],
     ['Нина Шестирублева', 23]
 ]
-#x = input('Хотите ввести своих студентов ?(да / нет)')
-#if x == 'да':
-#    kol_vo = int(input('Сколько студентов вы хотите ввести? (кол-во)'))
-#    i=0
-#    students_1 = []
-#    while i < kol_vo:
-#        Name = input('Введите Имя и Фамилию')
-#        Age = int(input ('Введите возраст'))
-#        students_cycle = [Name, Age]
-#        i += 1
-#        students_1.append(students_cycle)
-#    print('Получился такой список :',students_1)
-#    sch = 0
-#    summa = 0
-#    for s, (name,age) in enumerate(students_1):
-#        for m in name:
-#            if m != ' ':
-#                sch += 1
-#            else:
-#                pass
-#        if sch > 15:
-#            summa += 1
-#            sch = 0
-#        else:
-#            sch = 0
-#    print('Студентов у которых в сумме ФИО больше 15 символов :',summa)
-#    Gl_letters = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
-#    Devushki = []
-#    for s, (name, age) in enumerate(students_1):
-#        for v,n in enumerate(name):
-#            if name[v] == ' ':
-#                Name_gender = name[0:v]
-#                print(Name_gender)
-#                if name[v-1] in Gl_letters:
-#                    Devushki.append(name)
-#                else: pass
-#            else: pass
-#    Devushki = sorted((Devushki))
-#    print(Devushki)
-#    f = open('1.txt', 'w')
-#    f.write(str(Devushki) + '\n')
-#    f.close()
-#
-#else:
+
 print('используется следующий список :')
 for i, (name, age) in enumerate(Students):
     print(name, age)
 sch_1 = 0
 summa_1 = 0
 for s, (name, age) in enumerate(Students):
-    print(name)
+    #print(name)
     for m in name:
         if m != ' ':
             sch_1 += 1
@@ -89,17 +46,25 @@ for s, (name, age) in enumerate(Students):
 print('Студентов у которых в сумме ФИО больше 15 символов :', summa_1)
 Gl_letters = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е']
 Devushki = []
-for s, (name, age) in enumerate(Students):
+for b, (name, age) in enumerate(Students):
     for v, n in enumerate(name):
         if name[v] == ' ':
-            if name[v - 1] in Gl_letters:
+            if name[0 : v] == 'Никита':
+                pass
+            elif name[0 : v] == 'Илья':
+                pass
+            elif name[v - 1] in Gl_letters:
                 Devushki.append(name)
             else:
                 pass
         else:
             pass
 Devushki = sorted((Devushki))
-print(Devushki)
+kol_gl = 0
+for D in Devushki:
+    for n in D:
+        if n in Gl_letters:
+            kol_gl += 1
 f = open('1.txt','w')
-f.write(str(Devushki)+'\n')
+f.write(str(Devushki)+'\n'+str(kol_gl))
 f.close()
